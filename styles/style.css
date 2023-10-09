@@ -27,7 +27,7 @@ body {
 .header__menu {
   width: 100%;
   display: flex;
-  height: 60px;
+  height: 3.75rem;
   align-items: center;
 }
 
@@ -42,7 +42,7 @@ body {
 .header__hamburger--stripe {
   width: 35px;
   height: 5px;
-  background-color: rgb(132, 62, 223);
+  background-color: rgb(84, 234, 189);
   margin: 6px 0;
   transition: 0.4s;
   z-index: 1;
@@ -59,20 +59,18 @@ body {
 }
 
 #menu {
-  display: none;
-  opacity: 0.7;
+  display: flex;
+  opacity: 0;
   list-style: none;
-  transition: 0.4s;
+  transition: 0.3s ease-in-out;
   margin-left: 1rem;
   gap: 3px;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.header__list--textdecorator {
-  text-decoration: none;
-  color: black;
-  font-weight: 600;
+.header__listitem {
   opacity: 0.75;
   transition: 0.3s;
   width: 100px;
@@ -82,11 +80,29 @@ body {
   border-radius: 3px;
   background-color: rgba(245, 245, 245, 0.801);
   cursor: pointer;
-  height: 50px;
+  height: 3.125rem;
 }
 
-.header__list--textdecorator:hover {
+.list--textdecorator {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.header__listitem:hover {
   opacity: 1;
+}
+
+.header__logo {
+  width: 5rem;
+  height: 3.75rem;
+  background-image: url(/assets/logo/bonz.ai-logo-color-landscape.png);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  right: 1rem;
 }
 
 .header__picture {
@@ -98,7 +114,7 @@ body {
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 600px) {
   .btn--hamburger {
     display: none;
   }
@@ -108,8 +124,14 @@ body {
     gap: 1.2rem;
     width: 100%;
   }
-  .header__list--textdecorator {
-    width: 10rem;
+  .header__listitem {
+    width: 7rem;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .header__listitem {
+    width: 12rem;
   }
 }
 

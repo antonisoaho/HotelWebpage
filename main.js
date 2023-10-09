@@ -1,33 +1,41 @@
+const menuList = document.getElementById("menu");
+const menuListStyle = menuList.style.display;
+let storedCross = false;
+
 function burgerExpansion(snus) {
-  const menuList = document.getElementById("menu");
-  const menuListStyle = menuList.style.display;
+  const menuListStyle = menuList.style.opacity;
 
   snus.classList.toggle("change");
 
-  if (menuListStyle == "flex") {
-    menuList.style.display = "none";
-    let storedCross = false;
+  if (menuListStyle == "0.7") {
+    menuList.style.height = "0";
+    menuList.style.opacity = "0";
+    storedCross = false;
   } else {
-    menuList.style.display = "flex";
-    let storedCross = true;
+    menuList.style.height = "3.125rem";
+    menuList.style.opacity = "0.7";
+    storedCross = true;
+  }
+
+  return storedCross;
+}
+
+function screenWidthChange(mediaQuery, message) {
+  if (mediaQuery.matches) {
+    if (message == "Min-width" || (message == "Max-width" && storedCross)) {
+      menuList.style.height = "3.125rem";
+      menuList.style.opacity = "0.7";
+    } else {
+      menuList.style.height = "0";
+      menuList.style.opacity = "0";
+    }
   }
 }
 
-function screenWidthChange(mediaQuery) {
-  if (mediaQuery.matches || storedCross) {
-    menuList.style.display = "flex";
-  }
-}
+const mediaQueryMin = window.matchMedia("(min-width: 600px)");
+const mediaQueryMax = window.matchMedia("(max-width: 599px)");
 
-let storedCross = true;
-
-const menuList = document.getElementById("menu");
-const menuListStyle = menuList.style.display;
-
-const mediaQueryMin = window.matchMedia("(min-width: 520px)");
-const mediaQueryMax = window.matchMedia("(max-width: 519px)");
-
-screenWidthChange(mediaQueryMin);
-mediaQueryMin.addListener(screenWidthChange);
-screenWidthChange(mediaQueryMax);
-mediaQueryMax.addListener(screenWidthChange);
+screenWidthChange(mediaQueryMin, "Min-width");
+screenWidthChange(mediaQueryMax, "Max-width");
+mediaQueryMin.addListener(() => screenWidthChange(mediaQueryMin, "Min-width"));
+mediaQueryMin.addListener(() => screenWidthChange(mediaQueryMax, "Max-width"));
