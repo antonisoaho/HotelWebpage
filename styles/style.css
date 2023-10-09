@@ -11,6 +11,8 @@
   font-family: var(--mainFont);
 }
 
+/* HEADER */
+
 body {
   display: flex;
   flex-direction: column;
@@ -161,6 +163,8 @@ body {
   text-align: center;
   font-weight: 400;
 }
+
+/* MAIN-SECTION Landingpage */
 
 @media screen and (min-width: 600px) {
   .btn--hamburger {
