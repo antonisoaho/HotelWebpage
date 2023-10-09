@@ -286,6 +286,7 @@ body {
 
 .footer {
   width: 100%;
+  height: 12rem;
   background-color: darkgray;
 }
 
@@ -294,7 +295,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: darkslategrey;
 }
 .footer__navbar--backtotop {
   height: 4rem;
@@ -317,6 +318,7 @@ body {
   opacity: 0.5;
   top: 0.1rem;
 }
+
 @media screen and (max-width: 475px) {
   body {
     min-width: 320px;
