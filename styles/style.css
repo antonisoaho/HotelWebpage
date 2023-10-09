@@ -99,7 +99,7 @@ body {
 .header__logo {
   width: 5rem;
   height: 3.75rem;
-  background-image: url(assets/logo/bonz.ai-logo-color-landscape.png);
+  background-image: url(../assets/logo/bonz.ai-logo-color-landscape.png);
   background-repeat: no-repeat;
   background-size: 5rem;
   background-position: center center;
@@ -119,7 +119,7 @@ body {
 
 .header__picture:before {
   content: "";
-  background-image: url(assets/photos/manor-house-2359884_1280.jpg);
+  background-image: url(../assets/photos/manor-house-2359884_1280.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
