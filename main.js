@@ -7,12 +7,12 @@ const hidden = "0.0";
 function turnVisible(listItem) {
   if (window.innerWidth < "475") {
     menuList.style.height = "10rem";
+    menuList.style.opacity = "1";
     console.log(`dope`);
   } else {
     menuList.style.height = "3.125rem";
+    menuList.style.opacity = visible;
   }
-
-  menuList.style.opacity = visible;
 
   return storedCross;
 }
@@ -29,7 +29,7 @@ function burgerExpansion(snus) {
 
   snus.classList.toggle("change");
 
-  if (menuListStyle == visible) {
+  if (menuListStyle == visible || menuListStyle == "1") {
     turnHidden(menuList);
     storedCross = false;
   } else {
