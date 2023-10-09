@@ -1,34 +1,47 @@
 const menuList = document.getElementById("menu");
-const menuListStyle = menuList.style.display;
-let storedCross = true;
+let storedCross = false;
+
+const visible = "0.85";
+const hidden = "0.0";
+
+function turnVisible(listItem) {
+  menuList.style.height = "3.125rem";
+  menuList.style.opacity = visible;
+
+  return storedCross;
+}
+
+function turnHidden(listItem) {
+  menuList.style.height = hidden;
+  menuList.style.opacity = hidden;
+
+  return storedCross;
+}
 
 function burgerExpansion(snus) {
   const menuListStyle = menuList.style.opacity;
 
   snus.classList.toggle("change");
 
-  if (menuListStyle == "0.75") {
-    menuList.style.height = "0";
-    menuList.style.opacity = "0";
+  if (menuListStyle == visible) {
+    turnHidden(menuList);
     storedCross = false;
   } else {
-    menuList.style.height = "3.125rem";
-    menuList.style.opacity = "0.75";
+    turnVisible(menuList);
     storedCross = true;
   }
-
+  // console.log(`${storedCross}`);
   return storedCross;
 }
 
 function screenWidthChange(mediaQuery, message) {
   if (mediaQuery.matches) {
     if (message == "Min-width" || (message == "Max-width" && storedCross)) {
-      menuList.style.height = "3.125rem";
-      menuList.style.opacity = "0.75";
+      turnVisible(menuList);
     } else {
-      menuList.style.height = "0";
-      menuList.style.opacity = "0";
+      turnHidden(menuList);
     }
+    // console.log(`${storedCross}`);
   }
 }
 
