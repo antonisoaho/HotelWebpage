@@ -225,6 +225,8 @@ body {
   grid-row-start: 5;
 }
 
+/* Section */
+
 .section.activities {
   display: grid;
   align-items: center;
@@ -280,28 +282,40 @@ body {
   height: 2rem;
 }
 
+/* Footer */
+
 .footer {
   width: 100%;
   background-color: darkgray;
 }
 
 .footer__navbar {
-  height: 3rem;
+  height: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .footer__navbar--backtotop {
-  height: 3rem;
+  height: 4rem;
   min-width: 100%;
   cursor: pointer;
   position: relative;
   display: flex;
-  align-items: centeR;
+  align-items: flex-end;
   justify-content: center;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 0.1rem;
+}
+
+.footer__icon--positioner {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.5;
+  top: 0.1rem;
 }
 @media screen and (max-width: 475px) {
   body {
