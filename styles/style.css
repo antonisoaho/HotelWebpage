@@ -123,6 +123,7 @@ body {
     flex-direction: row;
     gap: 1.2rem;
     width: 100%;
+    opacity: 0.75;
   }
   .header__listitem {
     width: 7rem;
