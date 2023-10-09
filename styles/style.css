@@ -14,11 +14,9 @@
 body {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  /* align-items: flex-start; */
 }
 
-.headerPerPage {
+.header {
   display: flex;
   position: relative;
   flex-flow: row wrap;
@@ -26,14 +24,14 @@ body {
   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
-.headerPerPage nav {
+.header__menu {
   width: 100%;
   display: flex;
   height: 60px;
   align-items: center;
 }
 
-.hamburger {
+.btn--hamburger {
   display: inline-block;
   cursor: pointer;
   width: 36px;
@@ -41,10 +39,10 @@ body {
   margin-left: 1rem;
 }
 
-.stripe {
+.header__hamburger--stripe {
   width: 35px;
   height: 5px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(132, 62, 223);
   margin: 6px 0;
   transition: 0.4s;
   z-index: 1;
@@ -71,7 +69,12 @@ body {
   justify-content: center;
 }
 
-#menu li {
+.header__list--textdecorator {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  opacity: 0.75;
+  transition: 0.3s;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -81,7 +84,12 @@ body {
   cursor: pointer;
   height: 50px;
 }
-.headerPic {
+
+.header__list--textdecorator:hover {
+  opacity: 1;
+}
+
+.header__picture {
   width: 100%;
   height: 15rem;
   opacity: 80%;
@@ -91,7 +99,7 @@ body {
 }
 
 @media screen and (min-width: 520px) {
-  .hamburger {
+  .btn--hamburger {
     display: none;
   }
   #menu {
@@ -100,7 +108,7 @@ body {
     gap: 1.2rem;
     width: 100%;
   }
-  #menu li {
+  .header__list--textdecorator {
     width: 10rem;
   }
 }

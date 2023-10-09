@@ -7,20 +7,30 @@
     <title>Bonz.ai Hotel</title>
   </head>
   <body>
-    <header class="headerPerPage">
-      <nav>
-        <figure class="hamburger" onclick="burgerExpansion(this)">
-          <figure class="stripe stripe1"></figure>
-          <figure class="stripe stripe2"></figure>
-          <figure class="stripe stripe3"></figure>
+    <header class="header">
+      <nav class="header__menu">
+        <figure class="btn btn--hamburger" onclick="burgerExpansion(this)">
+          <figure class="header__hamburger--stripe stripe1"></figure>
+          <figure class="header__hamburger--stripe stripe2"></figure>
+          <figure class="header__hamburger--stripe stripe3"></figure>
         </figure>
-        <ul id="menu">
-          <li>Home</li>
-          <li>Rooms</li>
-          <li>About us</li>
+        <ul class="header__list" id="menu">
+          <li>
+            <a href="/index.html" class="header__list--textdecorator">Home</a>
+          </li>
+          <li>
+            <a href="/hotelrooms.html" class="header__list--textdecorator"
+              >Rooms</a
+            >
+          </li>
+          <li>
+            <a href="/roominfo.html" class="header__list--textdecorator"
+              >About us</a
+            >
+          </li>
         </ul>
       </nav>
-      <figure class="headerPic"></figure>
+      <figure class="header__picture"></figure>
     </header>
 
     <main class="homePageMain">
