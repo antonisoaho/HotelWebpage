@@ -339,6 +339,7 @@ body {
 
 .section__figure.room {
   width: 21rem;
+  display: inline-block;
   position: relative;
   aspect-ratio: 1/1;
   border-radius: 0.5rem;
