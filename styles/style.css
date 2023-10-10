@@ -328,6 +328,15 @@ body {
   text-align: center;
 }
 
+.section__article.searchcontainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
 .section__article.rooms {
   margin-top: 3rem;
   padding-bottom: 5rem;
@@ -388,7 +397,12 @@ body {
   font-weight: 600;
   padding: 0.2rem;
 }
-
+.room.popular {
+  order: -1;
+}
+.room.bestdeal {
+  order: -1;
+}
 .room.bestdeal::after {
   animation: borderColors 6s infinite;
   position: absolute;
@@ -425,6 +439,9 @@ body {
 
 .section__figure--text > h3 > i {
   font-weight: 400;
+}
+.section__figure--text > h3 > i > del {
+  color: red;
 }
 
 /* Footer */
@@ -493,6 +510,13 @@ body {
     min-height: 3.75rem;
     height: auto;
     overflow: visible;
+  }
+
+  .section__article.searchcontainer {
+    flex-direction: column;
+  }
+  .section__figure.room {
+    width: 19rem;
   }
 }
 
