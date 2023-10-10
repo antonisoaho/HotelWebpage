@@ -11,21 +11,46 @@
   font-family: var(--mainFont);
 }
 
-@room style(--popular: true) {
-  .room::after {
-    border: 2px solid orange;
-    content: "hot!!";
+@keyframes changeImage {
+  0%,
+  10%,
+  90%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  50%,
+  75% {
+    opacity: 0;
   }
 }
-@room style(--new: true) {
-  .room::after {
-    border: 2px solid crimson;
-    content: "new";
+
+@keyframes borderColors {
+  0%,
+  100% {
+    border-color: rgb(221, 80, 104);
+  }
+
+  15%,
+  85% {
+    border-color: rgb(45, 130, 179);
+  }
+
+  30%,
+  70% {
+    border-color: rgb(33, 233, 6);
+  }
+
+  50% {
+    border-color: rgb(209, 10, 20);
   }
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
 }
 
 body {
@@ -202,6 +227,7 @@ body {
   justify-content: center;
   padding: 3rem 0.5rem 1rem 0.5rem;
   opacity: 0.8;
+  padding-bottom: 2rem;
 }
 
 .main__header {
@@ -225,13 +251,12 @@ body {
   grid-row-start: 5;
 }
 
-/* Section */
+/* Section Landingpage*/
 
 .section.activities {
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   padding-top: 2rem;
   padding-bottom: 4rem;
   border-top: 3px dotted #7ee8fa;
@@ -255,7 +280,7 @@ body {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.49);
 }
 
-.section__figure {
+.section__figure.activity {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -282,9 +307,129 @@ body {
   height: 2rem;
 }
 
+/* Section Roompage */
+
+.section.rooms {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #e9bcb7;
+  background-image: linear-gradient(160deg, #e9bcb7 0%, #29524a 74%);
+}
+
+.section__header--ptext {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+.rooms > .section__header > * {
+  text-align: center;
+}
+
+.section__article.rooms {
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.section__figure.room {
+  width: 21rem;
+  position: relative;
+  aspect-ratio: 1/1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid #e393b5;
+  background-color: rgba(170, 170, 170, 0.35);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px 2px rgba(157, 111, 163, 0.75);
+}
+
+.section__figure--picture {
+  width: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.section__figure:nth-of-type(1) > .section__figure--picture {
+  background-image: url(../assets/photos/01-night.jpg);
+  background-size: 100%;
+}
+.section__figure:nth-of-type(2) .section__figure--picture {
+  background-image: url(../assets/photos/02-night.jpg);
+  background-size: 100%;
+}
+.section__figure:nth-of-type(3) .section__figure--picture {
+  background-image: url(../assets/photos/03-night.jpg);
+  background-size: 100%;
+}
+.section__figure:nth-of-type(4).room .section__figure--picture {
+  background-image: url(../assets/photos/05-night.jpg);
+  background-size: 100%;
+}
+.section__figure:nth-of-type(5).room .section__figure--picture {
+  background-image: url(../assets/photos/09-night.jpg);
+  background-size: 100%;
+}
+
+.room.popular::after {
+  position: absolute;
+  border: 2px solid #f981a7;
+  border-radius: 3px;
+  content: "POPULAR!";
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.49);
+  font-weight: 600;
+  padding: 0.2rem;
+}
+
+.room.bestdeal::after {
+  animation: borderColors 6s infinite;
+  position: absolute;
+  border: 2px solid;
+
+  border-radius: 3px;
+  content: "BEST DEAL!";
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.49);
+  font-weight: 600;
+  padding: 0.3rem;
+}
+
+.section__figure--picture > img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  animation: changeImage 7s infinite;
+}
+
+.section__figure--text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 8.125rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem;
+}
+
+.section__figure--text > * {
+  text-align: center;
+}
+
+.section__figure--text > h3 > i {
+  font-weight: 400;
+}
+
 /* Footer */
 
 .footer {
+  border-top: 2px solid rgb(35, 58, 58);
   width: 100%;
   height: 12rem;
   background-color: darkgray;
