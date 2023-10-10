@@ -363,8 +363,8 @@ body {
 }
 
 .section__figure.room:hover {
-  scale: 1.05;
-  z-index: 2;
+  transform: translatey(-3px);
+  box-shadow: 0px 4px 8px 3px rgba(157, 111, 163, 0.75);
 }
 
 .section__figure--picture {
