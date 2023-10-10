@@ -14,7 +14,15 @@ function updateItemVisibility() {
     const cardPrice = parseInt(card.getAttribute("data-price"));
     const meetsPrice = cardPrice <= maxPrice;
     const meetsSpecial = !showSpecial || card.classList.contains("special");
-    card.style.display = meetsPrice && meetsSpecial ? "inline-block" : "none";
+    if (meetsPrice && meetsSpecial) {
+      card.style.opacity = "1";
+      card.style.order = "";
+      card.style.pointerEvents = "";
+    } else {
+      card.style.opacity = "0";
+      card.style.order = "100";
+      card.style.pointerEvents = "none";
+    }
   });
 }
 
