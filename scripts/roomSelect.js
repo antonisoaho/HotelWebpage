@@ -2,9 +2,8 @@
 
 const slider = document.getElementById("priceSlider");
 const maxPriceDisplay = document.getElementById("sliderValue");
-const roomCards = document.querySelectorAll(".section__figure.room");
+const roomCards = document.querySelectorAll(".section__figure--room");
 const specialCheckbox = document.getElementById("specialCheckbox");
-const items = document.querySelectorAll(".room");
 
 function updateItemVisibility() {
   const maxPrice = parseInt(slider.value);
@@ -13,7 +12,8 @@ function updateItemVisibility() {
   roomCards.forEach((card) => {
     const cardPrice = parseInt(card.getAttribute("data-price"));
     const meetsPrice = cardPrice <= maxPrice;
-    const meetsSpecial = !showSpecial || card.classList.contains("special");
+    const meetsSpecial =
+      !showSpecial || card.classList.contains("room--special");
     if (meetsPrice && meetsSpecial) {
       card.style.opacity = "1";
       card.style.order = "";

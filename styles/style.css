@@ -121,7 +121,7 @@ body {
   overflow: hidden;
 }
 
-.header__listitem {
+.header__menu-item {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.49);
   opacity: 0.75;
   transition: 0.3s;
@@ -141,7 +141,7 @@ body {
   font-weight: 600;
 }
 
-.header__listitem:hover {
+.header__menu-item:hover {
   opacity: 1;
 }
 
@@ -347,7 +347,7 @@ body {
   gap: 0.5rem;
 }
 
-.section__figure.room {
+.section__figure--room {
   cursor: pointer;
   width: 21rem;
   display: inline-block;
@@ -362,7 +362,7 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.section__figure.room:hover {
+.section__figure--room:hover {
   transform: translatey(-3px);
   box-shadow: 0px 4px 5px 2px rgba(214, 87, 231, 0.75);
 }
@@ -373,28 +373,28 @@ body {
   background-repeat: no-repeat;
 }
 
-.section__figure:nth-of-type(1) > .section__figure--picture {
+.section__figure--room:nth-of-type(1) > .section__figure--picture {
   background-image: url(../assets/photos/01-night.jpg);
   background-size: 100%;
 }
-.section__figure:nth-of-type(2) .section__figure--picture {
+.section__figure--room:nth-of-type(2) .section__figure--picture {
   background-image: url(../assets/photos/02-night.jpg);
   background-size: 100%;
 }
-.section__figure:nth-of-type(3) .section__figure--picture {
+.section__figure--room:nth-of-type(3) .section__figure--picture {
   background-image: url(../assets/photos/03-night.jpg);
   background-size: 100%;
 }
-.section__figure:nth-of-type(4).room .section__figure--picture {
+.section__figure--room:nth-of-type(4) .section__figure--picture {
   background-image: url(../assets/photos/05-night.jpg);
   background-size: 100%;
 }
-.section__figure:nth-of-type(5).room .section__figure--picture {
+.section__figure--room:nth-of-type(5) .section__figure--picture {
   background-image: url(../assets/photos/09-night.jpg);
   background-size: 100%;
 }
 
-.room.popular::after {
+.room--popular::after {
   position: absolute;
   border: 2px solid #f981a7;
   border-radius: 3px;
@@ -405,13 +405,13 @@ body {
   font-weight: 600;
   padding: 0.2rem;
 }
-.room.popular {
+.room--popular {
   order: -1;
 }
-.room.bestdeal {
+.room--bestdeal {
   order: -1;
 }
-.room.bestdeal::after {
+.room--bestdeal::after {
   animation: borderColors 6s infinite;
   position: absolute;
   border: 2px solid;
@@ -497,7 +497,7 @@ body {
     min-width: 320px;
   }
 
-  .header__list {
+  .header__menu-list {
     flex-direction: column;
     position: absolute;
     left: -1rem;
@@ -510,13 +510,13 @@ body {
     padding: 0.2rem;
     border-radius: 3px;
   }
-  .header__listitem {
+  .header__menu-item {
     z-index: 3;
   }
   .header {
     flex-direction: column;
   }
-  .header__menu {
+  .header__menu-list {
     min-height: 3.75rem;
     height: auto;
     overflow: visible;
@@ -541,7 +541,7 @@ body {
     width: 100%;
     opacity: 0.85;
   }
-  .header__listitem {
+  .header__menu-item {
     width: 7rem;
   }
 

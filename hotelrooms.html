@@ -14,23 +14,25 @@
           <figure class="header__hamburger--stripe stripe2"></figure>
           <figure class="header__hamburger--stripe stripe3"></figure>
         </figure>
-        <ul class="header__list" id="menu">
+        <ul class="header__menu-list" id="menu">
           <li>
-            <a href="./index.html" class="header__listitem list--textdecorator"
+            <a
+              href="./index.html"
+              class="header__menu-item menu-item--home list--textdecorator"
               >Home</a
             >
           </li>
           <li>
             <a
               href="./hotelrooms.html"
-              class="header__listitem list--textdecorator"
+              class="header__menu-item menu-item--rooms list--textdecorator"
               >Rooms</a
             >
           </li>
           <li>
             <a
               href="./roominfo.html"
-              class="header__listitem list--textdecorator"
+              class="header__menu-item menu-item--specifics list--textdecorator"
               >Specifics</a
             >
           </li>
@@ -48,9 +50,9 @@
 
     <section class="section rooms">
       <header class="section__header">
-        <h1 class="section__header--headertext">
+        <h2 class="section__header--headertext">
           Rooms with AI-integrated services!
-        </h1>
+        </h2>
         <p class="section__header--ptext">
           With a room price of <b>199$</b> per night you can live with
           extraordinary view.
@@ -60,7 +62,7 @@
         </p>
       </header>
       <article class="section__article searchcontainer">
-        <figure class="section__searchcontainer--range">
+        <figure class="section__range">
           <p>Highest price: <span id="sliderValue">449</span>$</p>
           <input
             type="range"
@@ -71,13 +73,13 @@
             id="priceSlider"
           />
         </figure>
-        <figure class="section__searchcontainer--checkbox">
+        <figure class="section__checkbox">
           <label for="specialCheckbox">Special items only: </label
           ><input type="checkbox" id="specialCheckbox" />
         </figure>
       </article>
       <article class="section__article rooms">
-        <figure class="section__figure room" data-price="0">
+        <figure class="section__figure--room" data-price="0">
           <figure class="section__figure--picture">
             <img src="assets/photos/01-day.jpg" alt="" />
           </figure>
@@ -89,7 +91,7 @@
             </p>
           </figcaption>
         </figure>
-        <figure class="section__figure room" data-price="199">
+        <figure class="section__figure--room" data-price="199">
           <figure class="section__figure--picture">
             <img src="assets/photos/02-day.jpg" alt="" />
           </figure>
@@ -101,7 +103,10 @@
             </p>
           </figcaption>
         </figure>
-        <figure class="section__figure room popular special" data-price="299">
+        <figure
+          class="section__figure--room room--popular room--special"
+          data-price="299"
+        >
           <figure class="section__figure--picture">
             <img src="assets/photos/03-day.jpg" alt="" />
           </figure>
@@ -113,7 +118,7 @@
             </p>
           </figcaption>
         </figure>
-        <figure class="section__figure room" data-price="399">
+        <figure class="section__figure--room" data-price="399">
           <figure class="section__figure--picture">
             <img src="assets/photos/05-day.jpg" alt="" />
           </figure>
@@ -125,7 +130,10 @@
             </p>
           </figcaption>
         </figure>
-        <figure class="section__figure room bestdeal special" data-price="449">
+        <figure
+          class="section__figure--room room--bestdeal room--special"
+          data-price="449"
+        >
           <figure class="section__figure--picture">
             <img src="assets/photos/09-day.jpg" alt="" />
           </figure>
