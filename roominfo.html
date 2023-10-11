@@ -42,8 +42,8 @@
 
       <figure class="header__picture">
         <figcaption class="header__picture--text">
-          <h1>AI-based services</h1>
-          <p>Relax with full AI-experience</p>
+          <h1>Your choice</h1>
+          <p>Choose what you decire</p>
         </figcaption>
       </figure>
     </header>
@@ -53,12 +53,43 @@
           Wise choice of AI-companion!
         </h2>
         <p class="section__header--p">
-          On this site you can read more about the different packages you can
-          choose.
+          Choose what type of companion you want.
         </p>
+        <figure class="section__figure-dropdown">
+          <select class="section__dropdown-list" id="dropdownList">
+            <option value="Included" class="section__dropdown-item">
+              Boardgames (Included)
+            </option>
+            <option value="Robotbuilding" class="section__dropdown-item">
+              Robotbuilding
+            </option>
+            <option value="printed-food" class="section__dropdown-item">
+              3D-printed-food
+            </option>
+            <option value="Spa-treatment" class="section__dropdown-item">
+              Spa-treatment
+            </option>
+            <option value="Package-deal" class="section__dropdown-item">
+              Package-deal
+            </option>
+          </select>
+        </figure>
+
+        <figure class="section__figure-dateandsummary">
+          <label for="fromdate">From date:</label>
+          <input type="date" id="fromdate" />
+          <label for="todate">To date:</label>
+          <input type="date" id="todate" />
+
+          <p class="section__figure-dateandsummary--text">
+            For <span id="totaldays">0</span> days the total will be:
+            <span id="totalamount">199</span>$
+          </p>
+          <button class="btn btn--confirm">Proceed</button>
+        </figure>
       </header>
       <article class="section__article-packagedeals">
-        <figure class="section__figure-package" id="0">
+        <figure class="section__figure-package Included" data-price="0">
           <h3 class="section__figure-package--headertext">Boardgames</h3>
           <p class="section__figure-package--text">
             Playing board games against AI provides a captivating gaming
@@ -73,7 +104,7 @@
             horizons of traditional board gaming.
           </p>
         </figure>
-        <figure class="section__figure-package" id="199">
+        <figure class="section__figure-package Robotbuilding" data-price="199">
           <h3 class="section__figure-package--headertext">Robotbuilding</h3>
           <p class="section__figure-package--text">
             Building a small robot alongside AI is a thrilling journey into the
@@ -91,7 +122,7 @@
             imaginative generation.
           </p>
         </figure>
-        <figure class="section__figure-package" id="299">
+        <figure class="section__figure-package printed-food" data-price="299">
           <h3 class="section__figure-package--headertext">3D printed food</h3>
           <p class="section__figure-package--text">
             Choosing 3D-printed food guided by AI is a culinary adventure that
@@ -107,7 +138,7 @@
             that is both satisfying and intriguing.
           </p>
         </figure>
-        <figure class="section__figure-package" id="399">
+        <figure class="section__figure-package Spa-treatment" data-price="399">
           <h3 class="section__figure-package--headertext">Spa treatment</h3>
           <p class="section__figure-package--text">
             A spa treatment facilitated by AI revolutionizes the relaxation and
@@ -123,7 +154,7 @@
             technologically advanced approach to relaxation and self-care.
           </p>
         </figure>
-        <figure class="section__figure-package" id="449">
+        <figure class="section__figure-package Package-deal" data-price="449">
           <h3 class="section__figure-package--headertext">Package deal</h3>
           <p class="section__figure-package--text">
             Choosing a comprehensive package that encompasses playing board
@@ -158,48 +189,66 @@
         <h4 class="section__footer--header">
           Since all rooms have the same layout, here are some pictures.
         </h4>
-        <label for="checkbox" class="checkbox--label">Morning/Evening:</label>
-        <input type="checkbox" class="footer--checkbox" />
-        <img
-          src="assets/photos/01-day.jpg"
-          alt="day"
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/02-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/03-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/04-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/05-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/06-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/07-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
-        <img
-          src="assets/photos/08-day.jpg"
-          alt=""
-          class="section__footer--picture"
-        />
+        <label for="galleryCheckbox" class="checkbox--label"
+          >Morning/Evening:</label
+        >
+        <input type="checkbox" class="footer--checkbox" id="galleryCheckbox" />
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/01-day.jpg"
+            alt="day"
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/02-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/03-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/04-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/05-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/06-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/07-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
+        <figure class="section__footer-piccontainer">
+          <img
+            src="assets/photos/08-day.jpg"
+            alt=""
+            class="section__footer--picture"
+          />
+        </figure>
       </footer>
     </section>
     <footer class="footer">
