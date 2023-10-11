@@ -1,9 +1,11 @@
 const checkbox = document.getElementById("galleryCheckbox");
 const pictures = document.querySelectorAll(".section__footer--picture");
+const label = document.getElementById("footer-label");
 
 checkbox.addEventListener("change", () => {
   pictures.forEach((picture) => {
     picture.style.opacity = checkbox.checked ? "0" : "1";
+    label.innerHTML = checkbox.checked ? "Evening:" : "Morning:";
   });
 });
 
