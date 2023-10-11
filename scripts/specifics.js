@@ -19,31 +19,13 @@ function calculatePrice() {
     const dayDiff = diffMilliSec / (1000 * 3600 * 24);
     days.innerHTML = dayDiff;
 
-    let price = dayDiff * selectedDataPrice + dayDiff * 199;
+    let price = dayDiff * selectedDataPrice;
     totalPrice.innerHTML = price;
   }
 }
 
-function setArticlePackageHeight(selectedFigure) {
-  const packageDeals = document.querySelector(".section__article-packagedeals");
-
-  if (!selectedFigure) {
-    packageDeals.style.height = "auto";
-    return;
-  }
-
-  const selectedFigureHeight = selectedFigure.clientHeight;
-  const extraHeight = 64;
-
-  packageDeals.style.height = `${selectedFigureHeight + extraHeight}px`;
-}
-
 const fromDateInput = document.getElementById("fromdate");
 const toDateInput = document.getElementById("todate");
-const dropdownList = document.getElementById("dropdownList");
-const packageFigures = document.querySelectorAll(
-  ".section__article-packagedeals figure"
-);
 
 fromDateInput.addEventListener("change", () => {
   fromDate = new Date(fromDateInput.value);
@@ -55,30 +37,25 @@ toDateInput.addEventListener("change", () => {
   calculatePrice();
 });
 
+const dropdownList = document.getElementById("dropdownList");
+const packageFigures = document.querySelectorAll(
+  ".section__article-packagedeals figure"
+);
+
 dropdownList.addEventListener("change", function () {
   const selectedOption = this.value;
 
   packageFigures.forEach((figure) => {
-    figure.style.opacity = "0";
+    figure.style.display = "none";
   });
 
   const selectedFigure = document.querySelector(
     `.section__figure-package.${selectedOption}`
   );
   if (selectedFigure) {
-    selectedFigure.style.opacity = ".8";
-    selectedDataPrice = parseFloat(selectedFigure.getAttribute("data-price"));
-    calculatePrice();
-    setArticlePackageHeight(selectedFigure);
-  } else {
-    setArticlePackageHeight(null);
-  }
-});
+    selectedFigure.style.display = "flex";
 
-window.addEventListener("resize", () => {
-  const selectedOption = dropdownList.value;
-  const selectedFigure = document.querySelector(
-    `.section__figure-package.${selectedOption}`
-  );
-  setArticlePackageHeight(selectedFigure);
+    selectedDataPrice = parseFloat(selectedFigure.getAttribute("data-price")); // Update selectedDataPrice
+    calculatePrice();
+  }
 });
