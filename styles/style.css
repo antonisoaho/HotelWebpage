@@ -651,6 +651,8 @@ body {
   box-shadow: 0px 0px 8px 1px lightcoral;
   overflow: hidden;
   border-radius: 0.5rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .section__footer--picture {
@@ -661,44 +663,28 @@ body {
 
 .section__footer-piccontainer:nth-of-type(2) {
   background-image: url(../assets/photos/01-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(3) {
   background-image: url(../assets/photos/02-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(4) {
   background-image: url(../assets/photos/03-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(5) {
   background-image: url(../assets/photos/04-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(6) {
   background-image: url(../assets/photos/05-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(7) {
   background-image: url(../assets/photos/06-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 .section__footer-piccontainer:nth-of-type(8) {
   background-image: url(../assets/photos/07-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .section__footer-piccontainer:nth-of-type(9) {
   background-image: url(../assets/photos/08-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 /* Footer */
