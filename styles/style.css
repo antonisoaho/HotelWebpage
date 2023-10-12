@@ -492,7 +492,7 @@ body {
 }
 .section__figure-dateandsummary > *:nth-child(odd) {
   flex-basis: 40%;
-  height: 2rem;
+  min-height: 2rem;
   font-weight: 500;
   line-height: 2rem;
   color: rgb(205, 87, 216);
@@ -505,10 +505,18 @@ body {
   cursor: pointer;
 }
 
+.section__figure-dateandsummary--bolder {
+  font-weight: 700;
+  font-style: italic;
+}
+
 .section__figure-dateandsummary > .btn {
   background-color: #ccc;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .section__dropdown-list {
