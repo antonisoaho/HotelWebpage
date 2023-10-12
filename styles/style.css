@@ -486,7 +486,7 @@ body {
 .section__figure-dateandsummary {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 0.5rem;
+  flex-direction: column;
   padding: 0.5rem;
   justify-content: center;
 }
@@ -503,6 +503,7 @@ body {
   height: 2rem;
   font-weight: 400;
   cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
 .section__figure-dateandsummary--bolder {
@@ -519,15 +520,6 @@ body {
   border: none;
 }
 
-.section__dropdown-list {
-  position: relative;
-  height: 2rem;
-  margin-bottom: 1rem;
-  background-color: #ececec;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 .section__article-packagedeals {
   display: flex;
   align-items: center;
@@ -539,7 +531,7 @@ body {
 }
 
 .section__figure-package {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
@@ -548,19 +540,73 @@ body {
   border-radius: 2rem;
   border: 2px solid #11b47e;
   margin: 2rem 0;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   transition: 0.2s;
   background-color: #cccccc69;
   backdrop-filter: blur(3px);
   box-shadow: 0px 0px 5px 2px rgba(108, 182, 211, 0.75);
 }
 
+.section__figure-imagecontainer {
+  width: 100%;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  height: 100%;
+  aspect-ratio: 16/9;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../assets/photos/09-day.jpg);
+}
+
 .section__figure-package > * {
   text-align: center;
 }
 
+.section__figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .section__figure-package--text {
-  margin-top: 2rem;
+  padding-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.action-container {
+  align-items: centeR;
+  width: 100%;
+  display: flex;
+  border-top: solid 1px #11b47e;
+}
+
+.btn--accept {
+  margin: 10%;
+  height: 4rem;
+  width: 30%;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgb(106, 187, 187);
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+
+.btn--accept:hover {
+  background-color: rgb(85, 119, 119);
+}
+
+.section__figcaption-pros-list {
+  list-style: none;
+  width: 50%;
+}
+
+.pros-list__item {
+  text-align: end;
+}
+.pros-list__item::before {
+  content: "✓ ";
 }
 
 .section__footer-picturegallery {
@@ -653,11 +699,6 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.section__footer-piccontainer:nth-of-type(9) {
-  background-image: url(../assets/photos/09-night.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
 
 /* Footer */
 
@@ -701,9 +742,6 @@ body {
   body {
     min-width: 320px;
   }
-  /* body > * {
-    width: 50%;
-  } */
 
   .header__menu-list {
     flex-direction: column;
@@ -772,6 +810,13 @@ body {
     grid-column: 3 / 4;
   }
 
+  .section__figure-dateandsummary {
+    display: flex;
+    max-width: 50rem;
+    flex-direction: row;
+    row-gap: 0.5rem;
+  }
+
   .section__figure-package {
     width: 33.75rem;
   }
@@ -808,6 +853,27 @@ body {
   .main__text.p2 {
     grid-column: 3/4;
     grid-row: 2;
+  }
+
+  .section__figure-package {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 50rem;
+    max-width: 62.5rem;
+    align-items: center;
+  }
+
+  .section__figure-imagecontainer {
+    width: 50%;
+    /* margin-top: 3rem; */
+  }
+  .section__figcaption {
+    padding-top: 2rem;
+    width: 50%;
+    padding-left: 1.5rem;
+  }
+  .section__figure-package--text {
+    text-align: right;
   }
 }
 

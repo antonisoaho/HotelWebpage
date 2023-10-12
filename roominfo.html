@@ -52,10 +52,10 @@
         <h2 class="section__header--headertext">
           Wise choice of AI-companion!
         </h2>
-        <p class="section__header--p">
-          Choose what type of companion you want.
-        </p>
-        <figure class="section__figure-dropdown">
+        <p class="section__header--p">Here is our room, make your choices.</p>
+
+        <figure class="section__figure-dateandsummary">
+          <label for="dropdownList">Choose AI-companion:</label>
           <select class="section__dropdown-list" id="dropdownList">
             <option
               value=""
@@ -82,13 +82,19 @@
               Package-deal
             </option>
           </select>
-        </figure>
 
-        <figure class="section__figure-dateandsummary">
           <label for="fromdate">From date:</label>
           <input type="date" id="fromdate" />
           <label for="todate">To date:</label>
           <input type="date" id="todate" />
+          <label for="persons">Guests:</label>
+          <select name="guests" id="persons">
+            <option value="" disabled hidden selected hidden>Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
 
           <p class="section__figure-dateandsummary--text">
             For <span id="totaldays">0</span> days the total will be:
@@ -104,99 +110,161 @@
       </header>
       <article class="section__article-packagedeals">
         <figure class="section__figure-package Included" data-price="0">
-          <h3 class="section__figure-package--headertext">Boardgames</h3>
-          <p class="section__figure-package--text">
-            Playing board games against AI provides a captivating gaming
-            experience, seamlessly blending traditional gameplay with modern
-            technology. AI opponents simulate human-like strategies, making each
-            match engaging and challenging. It offers an opportunity to enhance
-            strategic thinking and decision-making skills while enjoying the
-            classic board game dynamics in a digital realm. The AI's
-            adaptability and varying difficulty levels ensure a diverse gaming
-            experience, catering to both novices and seasoned players,
-            ultimately enriching the gaming landscape and broadening the
-            horizons of traditional board gaming.
-          </p>
+          <figure class="section__figure-imagecontainer"></figure>
+          <figcaption class="section__figcaption">
+            <h3 class="section__figure-package--headertext">Boardgames</h3>
+            <p class="section__figure-package--text">
+              Playing board games against AI provides a captivating gaming
+              experience, seamlessly blending traditional gameplay with modern
+              technology. AI opponents simulate human-like strategies, making
+              each match engaging and challenging. It offers an opportunity to
+              enhance strategic thinking and decision-making skills while
+              enjoying the classic board game dynamics in a digital realm. The
+              AI's adaptability and varying difficulty levels ensure a diverse
+              gaming experience, catering to both novices and seasoned players,
+              ultimately enriching the gaming landscape and broadening the
+              horizons of traditional board gaming.
+            </p>
+          </figcaption>
+          <aside class="action-container">
+            <button class="btn btn--accept">Confirm</button>
+            <ul class="pros-list section__figcaption-pros-list">
+              <li class="pros-list__item">Enhances strategic thinking</li>
+              <li class="pros-list__item">Engaging and challenging gameplay</li>
+              <li class="pros-list__item">Adaptable AI opponents</li>
+              <li class="pros-list__item">asideerse gaming experience</li>
+            </ul>
+          </aside>
         </figure>
+
         <figure class="section__figure-package Robotbuilding" data-price="199">
-          <h3 class="section__figure-package--headertext">Robotbuilding</h3>
-          <p class="section__figure-package--text">
-            Building a small robot alongside AI is a thrilling journey into the
-            realms of technology and creativity. This collaborative process
-            involves crafting a physical robot while integrating it with AI
-            capabilities, allowing for a dynamic interaction between hardware
-            and intelligent software. Assembling the robot encourages hands-on
-            learning, fostering a deeper understanding of engineering and
-            robotics principles. The AI integration grants the robot the ability
-            to make informed decisions, learn from its environment, and adapt,
-            opening doors to innovative applications and sparking curiosity
-            about the potential of future human-AI collaborations. It
-            exemplifies the fascinating fusion of modern robotics with
-            artificial intelligence, paving the way for a tech-savvy and
-            imaginative generation.
-          </p>
+          <figure class="section__figure-imagecontainer"></figure>
+          <figcaption class="section__figcaption">
+            <h3 class="section__figure-package--headertext">Robotbuilding</h3>
+            <p class="section__figure-package--text">
+              Building a small robot alongside AI is a thrilling journey into
+              the realms of technology and creativity. This collaborative
+              process involves crafting a physical robot while integrating it
+              with AI capabilities, allowing for a dynamic interaction between
+              hardware and intelligent software. Assembling the robot encourages
+              hands-on learning, fostering a deeper understanding of engineering
+              and robotics principles. The AI integration grants the robot the
+              ability to make informed decisions, learn from its environment,
+              and adapt, opening doors to innovative applications and sparking
+              curiosity about the potential of future human-AI collaborations.
+              It exemplifies the fascinating fusion of modern robotics with
+              artificial intelligence, paving the way for a tech-savvy and
+              imaginative generation.
+            </p>
+          </figcaption>
+          <aside class="action-container">
+            <button class="btn btn--accept">Confirm</button>
+            <ul class="pros-list section__figcaption-pros-list">
+              <li class="pros-list__item">Hands-on learning</li>
+              <li class="pros-list__item">Integration of AI capabilities</li>
+              <li class="pros-list__item">Innovative applications</li>
+              <li class="pros-list__item">
+                Fosters understanding of engineering principles
+              </li>
+            </ul>
+          </aside>
         </figure>
+
         <figure class="section__figure-package printed-food" data-price="299">
-          <h3 class="section__figure-package--headertext">3D printed food</h3>
-          <p class="section__figure-package--text">
-            Choosing 3D-printed food guided by AI is a culinary adventure that
-            tantalizes the taste buds with a blend of innovation and flavors. AI
-            algorithms meticulously curate recipes and ingredients, optimizing
-            taste, texture, and nutritional value. The resulting 3D-printed
-            dishes often surprise with their palatable appeal, resembling
-            traditional favorites while showcasing unique twists. The AI-driven
-            customization allows for a tailored gastronomic experience, where
-            individuals can select from an array of tastes and cultural
-            influences. Ultimately, 3D-printed food crafted with AI transcends
-            the ordinary, offering a delightful and futuristic dining encounter
-            that is both satisfying and intriguing.
-          </p>
+          <figure class="section__figure-imagecontainer"></figure>
+          <figcaption class="section__figcaption">
+            <h3 class="section__figure-package--headertext">3D printed food</h3>
+            <p class="section__figure-package--text">
+              Choosing 3D-printed food guided by AI is a culinary adventure that
+              tantalizes the taste buds with a blend of innovation and flavors.
+              AI algorithms meticulously curate recipes and ingredients,
+              optimizing taste, texture, and nutritional value. The resulting
+              3D-printed dishes often surprise with their palatable appeal,
+              resembling traditional favorites while showcasing unique twists.
+              The AI-driven customization allows for a tailored gastronomic
+              experience, where individuals can select from an array of tastes
+              and cultural influences. Ultimately, 3D-printed food crafted with
+              AI transcends the ordinary, offering a delightful and futuristic
+              dining encounter that is both satisfying and intriguing.
+            </p>
+          </figcaption>
+          <aside class="action-container">
+            <button class="btn btn--accept">Confirm</button>
+            <ul class="pros-list section__figcaption-pros-list">
+              <li class="pros-list__item">Culinary innovation</li>
+              <li class="pros-list__item">Optimized taste and texture</li>
+              <li class="pros-list__item">Tailored gastronomic experience</li>
+              <li class="pros-list__item">Creative and unique dining</li>
+            </ul>
+          </aside>
         </figure>
+
         <figure class="section__figure-package Spa-treatment" data-price="399">
-          <h3 class="section__figure-package--headertext">Spa treatment</h3>
-          <p class="section__figure-package--text">
-            A spa treatment facilitated by AI revolutionizes the relaxation and
-            rejuvenation experience. AI-powered spa treatments combine
-            cutting-edge technology with tailored wellness routines. The AI
-            system analyzes individual preferences, health data, and stress
-            levels to create personalized treatment plans. From massages to
-            skincare, the AI optimizes techniques and pressure points, providing
-            a truly customized and therapeutic session. Sensors and AI
-            algorithms work in harmony to adapt the treatment in real-time,
-            ensuring a calming and soothing experience. Overall, an AI-driven
-            spa treatment enhances well-being, providing a holistic and
-            technologically advanced approach to relaxation and self-care.
-          </p>
+          <figure class="section__figure-imagecontainer"></figure>
+          <figcaption class="section__figcaption">
+            <h3 class="section__figure-package--headertext">Spa treatment</h3>
+            <p class="section__figure-package--text">
+              A spa treatment facilitated by AI revolutionizes the relaxation
+              and rejuvenation experience. AI-powered spa treatments combine
+              cutting-edge technology with tailored wellness routines. The AI
+              system analyzes individual preferences, health data, and stress
+              levels to create personalized treatment plans. From massages to
+              skincare, the AI optimizes techniques and pressure points,
+              providing a truly customized and therapeutic session. Sensors and
+              AI algorithms work in harmony to adapt the treatment in real-time,
+              ensuring a calming and soothing experience. Overall, an AI-driven
+              spa treatment enhances well-being, providing a holistic and
+              technologically advanced approach to relaxation and self-care.
+            </p>
+          </figcaption>
+          <aside class="action-container">
+            <button class="btn btn--accept">Confirm</button>
+            <ul class="pros-list section__figcaption-pros-list">
+              <li class="pros-list__item">Personalized treatment plans</li>
+              <li class="pros-list__item">
+                Customized and therapeutic session
+              </li>
+              <li class="pros-list__item">Enhanced well-being</li>
+              <li class="pros-list__item">Cutting-edge wellness technology</li>
+            </ul>
+          </aside>
         </figure>
+
         <figure class="section__figure-package Package-deal" data-price="449">
-          <h3 class="section__figure-package--headertext">Package deal</h3>
-          <p class="section__figure-package--text">
-            Choosing a comprehensive package that encompasses playing board
-            games against AI, building a small robot with AI integration,
-            selecting 3D-printed food guided by AI, and experiencing a spa
-            treatment facilitated by AI offers a multitude of advantages.
-            Firstly, it provides an all-encompassing exploration of cutting-edge
-            technologies, fostering a deeper understanding and appreciation for
-            AI's versatile applications in various domains. In terms of
-            engagement and entertainment, these experiences offer a novel and
-            interactive approach. Playing board games against AI and building a
-            robot together with AI involvement make for engaging activities that
-            challenge and stimulate creativity. The customization and
-            personalization offered in 3D-printed food and AI-driven spa
-            treatments heighten enjoyment, tailoring the experiences to
-            individual preferences and needs. Moreover, the integration of AI in
-            these activities optimizes the overall experience. AI algorithms
-            enhance strategies in board games, enrich the functionalities of the
-            robot, curate food preferences, and customize spa treatments,
-            elevating the quality and relevance of each activity. Lastly, these
-            experiences collectively encourage learning and exploration,
-            sparking interest in technology, innovation, and wellness.
-            Participants can gain valuable insights into how AI can enhance
-            daily life, from leisure activities to health and relaxation,
-            fostering a forward-thinking mindset and potentially inspiring
-            further exploration and involvement in the field of artificial
-            intelligence.
-          </p>
+          <figure class="section__figure-imagecontainer"></figure>
+          <figcaption class="section__figcaption">
+            <h3 class="section__figure-package--headertext">Package deal</h3>
+            <p class="section__figure-package--text">
+              Choosing a comprehensive package that encompasses playing board
+              games against AI, building a small robot with AI integration,
+              selecting 3D-printed food guided by AI, and experiencing a spa
+              treatment facilitated by AI offers a multitude of advantages.
+              Firstly, it provides an all-encompassing exploration of
+              cutting-edge technologies, fostering a deeper understanding and
+              appreciation for AI's versatile applications in various domains.
+              In terms of engagement and entertainment, these experiences offer
+              a novel and interactive approach. Playing board games against AI
+              and building a robot together with AI involvement make for
+              engaging activities that challenge and stimulate creativity.
+            </p>
+          </figcaption>
+          <aside class="action-container">
+            <button class="btn btn--accept">Confirm</button>
+            <ul class="pros-list section__figcaption-pros-list">
+              <li class="pros-list__item">
+                All-encompassing exploration of cutting-edge technologies
+              </li>
+              <li class="pros-list__item">
+                Enhanced engagement and entertainment
+              </li>
+              <li class="pros-list__item">
+                Optimized experiences tailored to individual preferences
+              </li>
+              <li class="pros-list__item">
+                Encourages learning and sparks interest in AI
+              </li>
+            </ul>
+          </aside>
         </figure>
       </article>
       <footer class="section__footer-picturegallery">

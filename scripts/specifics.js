@@ -41,7 +41,7 @@ toDateInput.addEventListener("change", () => {
 
 const dropdownList = document.getElementById("dropdownList");
 const packageFigures = document.querySelectorAll(
-  ".section__article-packagedeals figure"
+  ".section__article-packagedeals .section__figure-package"
 );
 
 dropdownList.addEventListener("change", function () {
